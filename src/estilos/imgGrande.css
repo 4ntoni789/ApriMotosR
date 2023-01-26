@@ -1,0 +1,11 @@
+.contImgGran{
+    width: 80%;
+    height: 50vw;
+    margin: auto;
+    text-align: center;
+ 
+}
+.contImgGran > img{
+    width: 80%;
+    height: 85%;
+}

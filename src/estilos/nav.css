@@ -1,0 +1,82 @@
+.contNavegacion{
+    display: flex;
+}
+.contA{
+    height: 86px;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+}
+.contA >a{
+    padding: 30px 20px 0 20px ;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14.3px;
+    transition: all .2s;
+    height: 100%;
+    cursor: pointer;
+}
+.contA:hover{
+    border-top: 4px solid #fff;
+}
+.contA >a:hover{
+    color: #fff;
+}
+.active{
+    border-top: 4px solid #fff;
+}
+.subNav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 470px;
+    background-color: rgb(255, 0, 0);
+    margin-top: 550px;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+}
+.subNav2{
+    animation: aparecer .5s forwards;
+}
+.subNav3{
+    animation: desaparecer .5s forwards;
+}
+.subNav > a{
+    height: 100px;
+    color: #fff;
+    z-index: 10;
+    border: none;
+    padding: 10px 0px 0 20px ;
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 13px;
+    transition: background .5s;
+}
+.subNav > a:hover{
+    background-color: #000;
+    color: #fff;
+}
+.active2{
+    background-color: #000;
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes desaparecer {
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

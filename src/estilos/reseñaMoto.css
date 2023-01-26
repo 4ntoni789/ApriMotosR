@@ -1,0 +1,24 @@
+.contRese{
+    width: 100%;
+    margin-top: 30px;
+}
+.contReseMoto{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px !important;
+}
+.rese{
+    margin: 0 0px 60px 30px;
+    width: 400px;
+    text-align: justify;
+}
+.rese > h2{
+    
+    font-size: 30px;
+}
+.rese > p{
+    line-height: 25px;
+}

@@ -1,0 +1,64 @@
+.contMotoLayaot{
+    width: 100%;
+    background-color: #f00;
+}
+.contMotoMuestra{
+    width: 100%;
+    margin: auto;
+}
+.contMostrarMoto{
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 4% 100%);
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.contMostrarMoto > img{
+    margin-left: 230px;
+    height: 330px;
+    width: 480px;
+    margin-top: 20px;
+    user-select: none;
+}
+.contDatos{
+    margin-left: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contDatos > h1{
+    text-transform:uppercase;
+    width: 300px;
+    font-size: 45px;
+    color: #f00;
+}
+.contDatos > h1>p{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #000;
+    height: 5px;
+}
+.contDatos >h4{
+    text-align: left;
+    width: 100%;
+    margin-top: 30px;
+    color: #f00;
+    font-size: 16px;
+}
+.datoPrecio{
+    margin-top: 5px;   
+}
+.clip{
+    clip-path: polygon(16% 0, 100% 33%, 100% 0);
+    background-color: #000;
+    height: 400px;
+    width: 35vw;
+    position: absolute;
+    right: 0;
+    user-select: none;
+}
