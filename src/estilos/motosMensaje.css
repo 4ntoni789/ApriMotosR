@@ -3,7 +3,7 @@
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
-    height: 450px;
+    height: 40vw;    
 }
 .contMensaje >img{
     width: 100%;
@@ -13,8 +13,8 @@
     background-color: rgb(255, 255, 255,.9);
     height: 100%;
     position: absolute;
-    width: 505px;
-    margin-left: 630px;
+    width: 40%;
+    transform: translateX(130%);
     top: 0;
     display: flex;
     justify-content: center;
@@ -23,10 +23,10 @@
 }
 .mensaje2{
     background-color: rgb(255, 255, 255,.9);
-    height: 100%;
     position: absolute;
-    width: 505px;
-    margin-left: 170px;
+    height: 100%;
+    width: 40%;
+    transform: translateX(30%);
     top: 0;
     display: flex;
     justify-content: center;
@@ -39,6 +39,7 @@
 }
 .datos > h1{
     font-size: 25px;
+    font-weight: bold;
 }
 .datos >p{
     color: #333;
@@ -56,4 +57,47 @@
     margin-top: 5px;
     font-size: 17px;
     color: #111;
+}
+
+@media screen and (max-width:1000px) {
+    .mensaje, .mensaje2{
+        overflow: hidden;
+    }
+    .datos >p{
+        margin: 0px 0 0px 0;
+        font-size: 1.5vw;
+        overflow: hidden;
+        line-height: 1.5;
+    }
+}
+@media screen and (max-width: 870px){
+    .datos > h1{
+        font-size: 2vw;
+    }
+    .datos >h3{
+        font-size: 1.4vw;
+    }
+}
+@media screen and (max-width: 700px){
+    .contMensaje{
+        height: 400px;
+    }
+    .contMensaje2{
+        
+    }
+    .datos > h1{
+        font-size: 28px;
+    }
+    .datos > h3{
+        font-size: 20px;
+    }
+    .datos >p{
+        font-size: 16px;
+        margin: 20px 0 30px 0;
+    }
+    .mensaje, .mensaje2{
+        width: 100%;
+        transform: translateX(0%);
+        border-bottom: 1px solid #000;
+    }   
 }

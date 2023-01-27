@@ -27,7 +27,7 @@ function Footer(props) {
         </div>
       </div>
       <div className='footSpan'>
-        <img  src={require('../img/losCoches.png')} />
+        <img className='footSpanImg' src={require('../img/losCoches.png')} />
         <p>Importador Oficial Los Coches 2022</p>
       </div>
     </footer>

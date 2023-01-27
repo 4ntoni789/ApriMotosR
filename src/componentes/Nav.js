@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
+import { faArrowDown, faBars, faL } from "@fortawesome/free-solid-svg-icons"
 import "../estilos/nav.css"
 import { Link, NavLink } from 'react-router-dom';
 import themeContext, { moto } from "../context/themeContext.js"
@@ -14,14 +14,25 @@ function Nav(props) {
   const DesSubNav = () => {
     setMostrarNav(false)
   }
+  const [mostrarNavRespon,setMostrarNavRespon] = useState(false)
+  const MostrarNavRes = ()=>{
+    if(mostrarNavRespon == false){
+      setMostrarNavRespon(true);
+    }else{
+      setMostrarNavRespon(false);
+    }
+  };
   return (
     <themeContext.Provider value={moto}>
-      <nav className='contNavegacion'>
+        <div className='contIcobar' onClick={MostrarNavRes}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+      <nav className={mostrarNavRespon == true ? "contNavegacion contNavegacion2":"contNavegacion"}>
         <div className='contA'>
-          <NavLink to="grupos" className={({ isActive }) => (isActive ? "active" : "")}>GRUPOS</NavLink>
+          <NavLink to="grupos" onClick={MostrarNavRes} className={({ isActive }) => (isActive ? "active" : "")}>GRUPOS</NavLink>
         </div>
         <div className='contA'>
-          <NavLink to="/">INICIO</NavLink>
+          <NavLink to="/" onClick={MostrarNavRes}>INICIO</NavLink>
         </div>
         <div className='contA'>
           <a href='#' onMouseEnter={() => MostrarSubNav()} onMouseOut={() => DesSubNav()}
@@ -31,7 +42,7 @@ function Nav(props) {
           {mostrarNav == true ?
             <div className='subNav subNav2' onMouseOut={() => DesSubNav()} key={mostrarNav} >
               {moto.map((m) => {
-                return (<NavLink key={m.key} onMouseEnter={() => MostrarSubNav()}
+                return (<NavLink key={m.key} onClick={MostrarNavRes} onMouseEnter={() => MostrarSubNav()}
                   className={({ isActive }) => (isActive ? "active2" : "")} to={m.name}>
                   {m.name}
                 </NavLink>)
@@ -45,13 +56,13 @@ function Nav(props) {
           {/* Barra de navegacion2 */}
         </div>
         <div className='contA'>
-          <a href='#'>DISTRIBUIDORES</a>
+          <a href='#' onClick={MostrarNavRes}>DISTRIBUIDORES</a>
         </div>
         <div className='contA'>
-          <a href='#'>POSTVENTA</a>
+          <a href='#' onClick={MostrarNavRes}>POSTVENTA</a>
         </div>
         <div className='contA'>
-          <a href='#'>Blog</a>
+          <a href='#' onClick={MostrarNavRes}>Blog</a>
         </div>
       </nav>
     </themeContext.Provider>
