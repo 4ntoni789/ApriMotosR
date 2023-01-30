@@ -36,7 +36,7 @@ function Nav(props) {
         </div>
         <div className='contA'>
           <a href='#' onMouseEnter={() => MostrarSubNav()} onMouseOut={() => DesSubNav()}
-          >NUESTROS MODELOS <FontAwesomeIcon icon={faArrowDown} />
+          >NUESTROS MODELOS <FontAwesomeIcon icon={faArrowDown}  />
           </a>
           {/* Barra de navegacion2 */}
           {mostrarNav == true ?

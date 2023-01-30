@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Footer from '../componentes/Footer';
-import ItemMoto from '../componentes/ItemMoto';
 import MotosMensaje from '../componentes/MotosMensaje';
 import "../estilos/inicio.css";
 import themeContext, { moto } from "../context/themeContext.js";
+const ItemMoto = lazy(() => import("../componentes/ItemMoto"));
 
 function Inicio(props) {
   return (
@@ -76,9 +76,11 @@ function Inicio(props) {
           parrafo="El futuro respeta la tradición de la casa Noale que siempre se ha destacado por su carácter e innovación. Con personalidad deportiva y sorprendentes líneas contemporáneas, la RS 660 lleva a la carretera la experiencia líder de Aprilia en circuito."
         />
         <div className='items'>
-          {moto.map((m) => {
-            return <ItemMoto src={m.src} nombre={m.name} key={m.key} />
-          })}
+          <Suspense fallback={<h1>cargando...</h1> /*<Loading/>*/}>
+            {moto.map((m) => {
+              return <ItemMoto src={m.src} nombre={m.name} key={m.key} />
+            })}
+          </Suspense>
         </div>
         <Footer />
       </div>
