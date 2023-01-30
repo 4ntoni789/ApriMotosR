@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faBars, faL } from "@fortawesome/free-solid-svg-icons"
 import "../estilos/nav.css"
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import themeContext, { moto } from "../context/themeContext.js"
 
 function Nav(props) {
