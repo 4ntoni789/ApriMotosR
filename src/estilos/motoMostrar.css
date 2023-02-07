@@ -23,7 +23,6 @@
     user-select: none;
 }
 .contDatos{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +35,6 @@
     color: #f00;
 }
 .contDatos > h1>p{
-    
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 3px;
@@ -44,7 +42,6 @@
     height: 5px;
 }
 .contDatos >h4{
-    text-align: left;
     width: 100%;
     margin-top: 30px;
     color: #f00;
@@ -61,4 +58,24 @@
     position: absolute;
     right: 0;
     user-select: none;
+}
+@media (max-width:850px) {
+    .contMostrarMoto{
+        flex-direction: column;
+    }
+    .clip{
+        top: 0;
+    }
+    .contDatos > *{
+        text-align: center;
+    }
+    .contMotoLayaot{
+        margin-bottom: 40px;
+    }
+}
+@media (max-width:520px) {
+    .contMostrarMoto > img{
+        height: 100%;
+        width: 100%;
+    }
 }
