@@ -93,8 +93,7 @@
 
 @media screen and (max-width:1050px) {
     .footApp {
-        width: 100%;
-        margin-left: 10px;
+        width: 100%;   
     }
 }
 

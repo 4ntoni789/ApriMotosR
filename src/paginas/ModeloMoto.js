@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import "../estilos/modeloMotos.css";
 import themeContext, { moto } from "../context/themeContext.js";
@@ -10,14 +10,18 @@ import ImgGrande from '../componentes/ImgGrande';
 import SliderMoto from "../componentes/SliderMoto.js"
 import EspMoto from '../componentes/EspMoto';
 import { Suspense, lazy } from 'react';
+import BntSubirPagina from '../componentes/BntSubirPagina';
 const MotoMostrar = lazy(() => import("../componentes/MotoMostrar"));
 
 function ModeloMoto(props) {
 	const { name, id } = useParams();
 	let motoIden = [];
+	// useEffect(()=>{
+	// 	document.title = name;
+	// },[])
 	return (
 		<themeContext.Provider value={moto}>
-			<div className='contModeloMoto contInicio2' >
+			<div className='contModeloMoto contInicio2' id="mdMotoMap" >
 				<Suspense fallback={<h1>cargando...</h1> /*<Loading/>*/}>
 					{moto.map((m) => {
 						if (m.name == name) {
@@ -54,6 +58,7 @@ function ModeloMoto(props) {
 				<EspMoto />
 			</div>
 			<SliderMoto />
+			<BntSubirPagina redireccion="#mdMotoMap"/>
 			<Footer />
 		</themeContext.Provider>
 	);

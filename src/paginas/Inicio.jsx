@@ -1,15 +1,17 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import Footer from '../componentes/Footer';
 import MotosMensaje from '../componentes/MotosMensaje';
 import "../estilos/inicio.css";
 import themeContext, { moto } from "../context/themeContext.js";
+import BntSubirPagina from '../componentes/BntSubirPagina';
+import { useState } from 'react';
 const ItemMoto = lazy(() => import("../componentes/ItemMoto"));
 
 function Inicio(props) {
   return (
     <themeContext.Provider value={moto}>
       <div className='contInicio contInicio2'>
-        <img src='https://aprilia-colombia.com/wp-content/uploads/2023/01/Aprilia-Banner-Desktop.jpg' />
+        <img id='Span123' src='https://aprilia-colombia.com/wp-content/uploads/2023/01/Aprilia-Banner-Desktop.jpg' />
         <div className='span'>
           <h1>APRILIA Colombia</h1>
           <h1>¡DESCUBRE TODAS LAS EMOCIONANTES NOVEDADES QUE EL GRUPO PIAGGIO PRESENTÓ EN EICMA 2021!</h1>
@@ -78,10 +80,11 @@ function Inicio(props) {
         <div className='items'>
           <Suspense fallback={<h1>cargando...</h1> /*<Loading/>*/}>
             {moto.map((m) => {
-              return <ItemMoto src={m.src} nombre={m.name} key={m.key} />
+              return <ItemMoto src={m.src} nombre={m.name} key={m.key}/>
             })}
           </Suspense>
         </div>
+        <BntSubirPagina redireccion="#Span123"/>
         <Footer />
       </div>
     </themeContext.Provider>

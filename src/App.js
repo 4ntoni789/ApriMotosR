@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header/>
         <Routes>
           <Route path='/' element={<Inicio />} />
           <Route path='/grupos' element={<h1>grupos</h1>} />
