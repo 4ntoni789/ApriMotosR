@@ -60,7 +60,7 @@ function Nav(props) {
           {/* Barra de navegacion2 */}
         </div>
         <div className='contA'>
-          <a href='#' onClick={MostrarNavRes}>DISTRIBUIDORES</a>
+          <NavLink to={"distribuidores"} onClick={MostrarNavRes}>DISTRIBUIDORES</NavLink>
         </div>
         <div className='contA'>
           <a href='#' onClick={MostrarNavRes}>POSTVENTA</a>

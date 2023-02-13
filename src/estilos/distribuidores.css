@@ -1,0 +1,37 @@
+.contDistribuidores {
+  padding-top: 87px;
+}
+.contDistribuidores__img {
+  background-image: url("https://aprilia-colombia.com/wp-content/uploads/2021/01/image.jpg");
+  height: 140px;
+  background-position: center left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.contDistribuidores__img__modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.contDistribuidores__img__modal h5 {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 0%;
+}
+.contDistribuidores__img__modal h1 {
+  color: #f00;
+  font-size: 45px;
+  font-weight: 660;
+}
+.contDistribuidores__ubicacion {
+  margin: 70px 0 180px 0;
+}
+
+/*# sourceMappingURL=distribuidores.css.map */
